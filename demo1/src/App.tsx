@@ -11,7 +11,9 @@ function App() {
   const [messages, setMessages] = useState([]);
 
   const addMessage = function(message){
-    setMessages((messages) => [...messages].concat(message.data));
+    const newMessages = [...messages];
+    newMessages.push(message.data);
+    setMessages(newMessages);
   }
 
   const eventHandler: SocketEventHandler = {

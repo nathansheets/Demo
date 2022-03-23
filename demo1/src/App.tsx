@@ -19,7 +19,7 @@ function App() {
       onClose: () => { alert("Socket has been closed") },
       onMessage: (message) => {
         if (message.type !== 'userId'){
-          addMessage.call(message);
+          addMessage(message);
         }
       }
   };
